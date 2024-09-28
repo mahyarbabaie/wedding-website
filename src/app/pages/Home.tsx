@@ -1,0 +1,16 @@
+import React from "react";
+
+const Home: React.FC = () => {
+
+    return (
+        <div className="flex items-center justify-center h-screen bg-white">
+            <div className="text-center">
+                <h1 className="text-4xl font-bold text-gray-800">Wedding</h1>
+                <p className="text-gray-600 mt-2">Home</p>
+                {/* You can add more content or styling as needed */}
+            </div>
+        </div>
+    );
+};
+
+export default Home;

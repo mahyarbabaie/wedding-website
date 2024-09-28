@@ -12,7 +12,7 @@ interface Props {
 }
 
 const PasswordLogin: React.FC = (props: Props) => {
-    const { register, handleSubmit, formState:{errors}, reset} = useForm<PasswordLoginForm>();
+    const { register, handleSubmit,} = useForm<PasswordLoginForm>();
     const [password, setPassword] = useState("")
     const [passwordFailed, setPasswordFailed] = useState(false)
     const lockIcon = faLock

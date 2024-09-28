@@ -1,12 +1,12 @@
 import NotFound from "./app/pages/NotFound.tsx";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from "./app/pages/Home.tsx";
+import WeddingSiteManager from "./app/pages/WeddingSiteManager.tsx";
 
 function App() {
   return (
       <Router>
           <Routes>
-              <Route path="/" element={<Home/>}/>
+              <Route path="/" element={<WeddingSiteManager/>}/>
               <Route path="/*" element={<NotFound/>}/>
           </Routes>
       </Router>

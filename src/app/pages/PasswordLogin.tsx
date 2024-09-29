@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {faLock} from "@fortawesome/free-solid-svg-icons/faLock";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {IS_AUTHENTICATED} from "../constants";
 
 interface PasswordLoginForm {
     password: string
@@ -20,6 +21,7 @@ const PasswordLogin: React.FC = (props: Props) => {
 
     const onSubmit: SubmitHandler<PasswordLoginForm> = async (passwordLoginForm: PasswordLoginForm) => {
         if (passwordLoginForm.password == expectedPassword) {
+            localStorage.setItem(IS_AUTHENTICATED, "true")
             props.handleSetIsAuthenticated(true)
         } else {
             setPasswordFailed(true)
@@ -34,7 +36,7 @@ const PasswordLogin: React.FC = (props: Props) => {
         <div className="bg-gray-50">
             <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex items-center h-screen justify-center">
-                    <div className="text-center w-1/5">
+                    <div className="text-center sm:w-1/5">
                         <FontAwesomeIcon icon={lockIcon}
                                          className={"text-gray-800/40 text-2xl border rounded-full border-gray-800/40 p-4 my-2"}/>
                         <p className={"text-lg my-2"}>Shima & Mahyar's Wedding</p>

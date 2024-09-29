@@ -1,13 +1,29 @@
 import React from "react";
+import homePageCoverImg from "../../assets/GTHomeSample.jpeg"
+import MobileBanner from "../components/MobileBanner.tsx"
+import DesktopBanner from "../components/DesktopBanner.tsx";
+import {HOME_PAGE} from "../constants";
 
-const Home: React.FC = () => {
 
+interface Props {
+    setCurrentPage: any
+}
+
+const Home: React.FC = (props: Props) => {
     return (
-        <div className="flex items-center justify-center h-screen bg-white">
-            <div className="text-center">
-                <h1 className="text-4xl font-bold text-gray-800">Wedding</h1>
-                <p className="text-gray-600 mt-2">Home</p>
-                {/* You can add more content or styling as needed */}
+        <div className="flex flex-col h-screen bg-gray-50">
+            {/* desktop view */}
+            <div className="sm:block hidden">
+                <div className="flex flex-col items-center text-center justify-center">
+                    <DesktopBanner pageName={HOME_PAGE} setCurrentPage={props.setCurrentPage}/>
+                    <img src={`${homePageCoverImg}`} alt={"shima and mahyar header image"}
+                         className={"h-[40rem] w-full px-10 my-4 rounded-md"}/>
+                </div>
+            </div>
+
+            {/* mobile view */}
+            <div className="sm:hidden block">
+            <MobileBanner pageName={"S & M"} coverPhoto={homePageCoverImg}/>
             </div>
         </div>
     );

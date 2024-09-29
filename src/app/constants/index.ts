@@ -1,0 +1,8 @@
+export const IS_AUTHENTICATED = "isAuthenticated"
+export const HOME_PAGE = "Home"
+export const OUR_STORY_PAGE = "Our Story"
+export const QA_PAGE = "Q + A"
+export const TRAVEL_PAGE = "Travel"
+export const THINGS_TO_DO_PAGE = "Things to Do"
+export const RSVP_PAGE = "RSVP"
+export const REGISTRY_PAGE = "Registry"

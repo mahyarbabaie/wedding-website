@@ -23,7 +23,7 @@ const Home: React.FC = (props: Props) => {
 
             {/* mobile view */}
             <div className="sm:hidden block">
-            <MobileBanner pageName={"S & M"} coverPhoto={homePageCoverImg}/>
+            <MobileBanner pageName={"S & M"} setCurrentPage={props.setCurrentPage} coverPhoto={homePageCoverImg}/>
             </div>
         </div>
     );

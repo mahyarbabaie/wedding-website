@@ -12,15 +12,6 @@ import {
 
 const headerTitle = "Shima & Mahyar"
 const headerDate = "March 16, 2025 • San Diego, CA"
-const tabs = [
-    "Home",
-    "Our Story",
-    "Q + A",
-    "Travel",
-    "Things to Do",
-    "RSVP",
-    "Registry",
-]
 
 interface NavTabs {
     name: string
@@ -76,7 +67,7 @@ const DesktopBanner: React.FC = (props: Props) => {
             <p className="text-4xl font-bold text-gray-800 my-4">{headerTitle}</p>
             <p className="text-gray-600 mt-2 mb-10">{headerDate}</p>
             <div className="flex flex-row gap-x-10 my-2">
-                {navTabs.map((navTab) => <button className={"text-md hover:underline hover:underline-offset-4 " + (props.pageName == navTab.name ? "font-bold underline underline-offset-4" : "") } onClick={navTab.onClick}>{navTab.name}</button>)}
+                {navTabs.map((navTab, $index) => <button key={navTab.name + $index} className={"text-md hover:underline hover:underline-offset-4 " + (props.pageName == navTab.name ? "font-bold underline underline-offset-4" : "") } onClick={navTab.onClick}>{navTab.name}</button>)}
             </div>
         </div>
     )

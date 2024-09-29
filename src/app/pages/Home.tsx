@@ -17,13 +17,13 @@ const Home: React.FC = (props: Props) => {
                 <div className="flex flex-col items-center text-center justify-center">
                     <DesktopBanner pageName={HOME_PAGE} setCurrentPage={props.setCurrentPage}/>
                     <img src={`${homePageCoverImg}`} alt={"shima and mahyar header image"}
-                         className={"h-[40rem] w-full px-10 my-4 rounded-md"}/>
+                             className={"object-cover h-[500px] w-[1200px] px-10 my-4 rounded-md"}/>
                 </div>
             </div>
 
             {/* mobile view */}
             <div className="sm:hidden block">
-            <MobileBanner pageName={"S & M"} setCurrentPage={props.setCurrentPage} coverPhoto={homePageCoverImg}/>
+                <MobileBanner pageName={"S & M"} setCurrentPage={props.setCurrentPage} coverPhoto={homePageCoverImg}/>
             </div>
         </div>
     );

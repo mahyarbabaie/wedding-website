@@ -105,7 +105,7 @@ const MobileBanner: React.FC = (props: Props) => {
             </div>}
             <div className="flex flex-col items-center text-center justify-center">
                 <div className="mx-auto my-8">
-                    <img src={`${weddingLogo}`} alt={"shima and mahyar logo"} height={150} width={150}/>
+                    <img src={`${weddingLogo}`} alt={"shima and mahyar logo"} className={"h-[150px] w-[150px]"}/>
                 </div>
                 <p className="text-4xl font-dancingScript text-gray-800">{headerTitle}</p>
                 <p className="text-gray-600 font-libreBaskerville my-5">{headerDate}</p>

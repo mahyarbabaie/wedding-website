@@ -85,7 +85,7 @@ const MobileBanner: React.FC = (props: Props) => {
                 <button className="my-auto col-span-1" onClick={handleSetMobileTabsToggled}>
                     <FontAwesomeIcon className="h-6 w-auto my-auto mr-3" icon={faBars}/>
                 </button>
-                <p className="text-2xl my-auto col-span-10 text-center">{props.pageName}</p>
+                <p className="text-2xl my-auto col-span-10 text-center font-dancingScript">{props.pageName}</p>
                 <Modal
                     isOpen={mobileTabsToggled}
                     onRequestClose={handleSetMobileTabsToggled}
@@ -94,7 +94,7 @@ const MobileBanner: React.FC = (props: Props) => {
                     <button onClick={handleSetMobileTabsToggled}><FontAwesomeIcon className="h-5 w-auto m-2" icon={faX}/></button>
                     <div className="flex flex-col gap-y-6 my-4">
                         {navTabs.map((navTab, $index) => <button key={navTab.name + $index}
-                                                                 className={"text-md hover:underline hover:underline-offset-4 " + (navTab.isActive ? "font-bold underline underline-offset-4" : "")}
+                                                                 className={"font-libreBaskerville hover:underline hover:underline-offset-4 " + (navTab.isActive ? "font-bold underline underline-offset-4" : "text-gray-800")}
                                                                  onClick={navTab.onClick}>{navTab.name}</button>)}
                     </div>
                 </Modal>
@@ -108,7 +108,7 @@ const MobileBanner: React.FC = (props: Props) => {
                     <img src={`${weddingLogo}`} alt={"shima and mahyar logo"} height={150} width={150}/>
                 </div>
                 <p className="text-4xl font-dancingScript text-gray-800">{headerTitle}</p>
-                <p className="text-gray-600 my-5">{headerDate}</p>
+                <p className="text-gray-600 font-libreBaskerville my-5">{headerDate}</p>
             </div>
         </div>
     )

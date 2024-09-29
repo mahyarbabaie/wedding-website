@@ -65,9 +65,9 @@ const DesktopBanner: React.FC = (props: Props) => {
                 <img src={`${weddingLogo}`} alt={"shima and mahyar logo"}/>
             </div>
             <p className="text-4xl font-dancingScript text-gray-800 my-4">{headerTitle}</p>
-            <p className="text-gray-600 mt-2 mb-10">{headerDate}</p>
+            <p className="font-libreBaskerville text-gray-600 mt-2 mb-10">{headerDate}</p>
             <div className="flex flex-row gap-x-10 my-2">
-                {navTabs.map((navTab, $index) => <button key={navTab.name + $index} className={"text-md hover:underline hover:underline-offset-4 " + (props.pageName == navTab.name ? "font-bold underline underline-offset-4" : "") } onClick={navTab.onClick}>{navTab.name}</button>)}
+                {navTabs.map((navTab, $index) => <button key={navTab.name + $index} className={"font-libreBaskerville text-md hover:underline hover:underline-offset-4 " + (props.pageName == navTab.name ? "font-bold underline underline-offset-4" : "text-gray-800") } onClick={navTab.onClick}>{navTab.name}</button>)}
             </div>
         </div>
     )

@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         dancingScript: ["Dancing Script", "cursive"],
+        libreBaskerville: ["Libre Baskerville", "serif"],
       },
       colors: {
         primaryBG: '#FAFCF7',

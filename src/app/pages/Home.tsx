@@ -11,7 +11,7 @@ interface Props {
 
 const Home: React.FC = (props: Props) => {
     return (
-        <div className="flex flex-col h-screen bg-gray-50">
+        <div className="flex flex-col h-screen bg-primaryBG">
             {/* desktop view */}
             <div className="sm:block hidden">
                 <div className="flex flex-col items-center text-center justify-center">

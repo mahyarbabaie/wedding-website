@@ -4,9 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-
+        dancingScript: ["Dancing Script", "cursive"],
       },
       colors: {
+        primaryBG: '#FAFCF7',
         primaryIndigo: '#405DAA',
         primaryBlue: '#19ABDC',
         primarySkyBlue: '#52CFFF',

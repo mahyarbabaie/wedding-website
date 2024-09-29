@@ -89,7 +89,7 @@ const MobileBanner: React.FC = (props: Props) => {
                 <Modal
                     isOpen={mobileTabsToggled}
                     onRequestClose={handleSetMobileTabsToggled}
-                    className="relative h-screen z-10 p-4 bg-gray-50"
+                    className="relative h-screen z-10 p-4 bg-primaryBG"
                 >
                     <button onClick={handleSetMobileTabsToggled}><FontAwesomeIcon className="h-5 w-auto m-2" icon={faX}/></button>
                     <div className="flex flex-col gap-y-6 my-4">
@@ -107,7 +107,7 @@ const MobileBanner: React.FC = (props: Props) => {
                 <div className="mx-auto my-8">
                     <img src={`${weddingLogo}`} alt={"shima and mahyar logo"} height={150} width={150}/>
                 </div>
-                <p className="text-4xl font-bold text-gray-800">{headerTitle}</p>
+                <p className="text-4xl font-dancingScript text-gray-800">{headerTitle}</p>
                 <p className="text-gray-600 my-5">{headerDate}</p>
             </div>
         </div>

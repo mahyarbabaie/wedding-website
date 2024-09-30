@@ -101,7 +101,7 @@ const MobileBanner: React.FC = (props: Props) => {
             </div>
             {props.coverPhoto && <div>
                 <img src={`${homePageHeaderImage}`} alt={"shima and mahyar header image"}
-                     className={"px-2 rounded-lg"}/>
+                     className={"rounded-lg"}/>
             </div>}
             <div className="flex flex-col items-center text-center justify-center">
                 <div className="mx-auto my-8">

@@ -47,10 +47,10 @@ const Home: React.FC = (props: Props) => {
                     className={"bg-primaryBrown w-[100px] h-[50px] text-white rounded-lg text-lg sm:mt-0 my-4"}>RSVP
                 </button>
                 <div className={"bg-primaryBrown/40 w-[600px] h-[1px] my-4"}></div>
-                <p className={"text-[24px] font-thin font-montserrat mt-6"}>CEREMONY & RECEPTION</p>
-                <p className={"text-[16px] font-thin font-montserrat mt-2"}>Grand Tradition Estate & Gardens</p>
-                <p className={"text-[16px] font-thin font-montserrat"}>220 Grand Tradition Way, Fallbrook, CA, 92028-4107</p>
-                <p className={"text-[16px] font-thin font-montserrat mt-2 mb-6"}>Attire: Semi-Formal</p>
+                <p className={"sm:text-[24px] text-[20px] font-thin font-montserrat mt-6"}>CEREMONY & RECEPTION</p>
+                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat mt-2"}>Grand Tradition Estate & Gardens</p>
+                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat"}>220 Grand Tradition Way, Fallbrook, CA, 92028</p>
+                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat mt-2 mb-6"}>Attire: Semi-Formal</p>
                 <div className={"bg-primaryBrown/40 w-[600px] h-[1px] my-4"}></div>
             </div>
         </div>

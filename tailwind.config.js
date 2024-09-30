@@ -14,6 +14,7 @@ export default {
         primarySkyBlue: '#52CFFF',
         primaryGreen: '#17B169',
         primaryLightGreen: '#DAF7A6',
+        primaryBrown: '#8A642F',
       },
       animation: {
         'shake': 'shake 0.82s cubic-bezier(.36,.07,.19,.97) both',

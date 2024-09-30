@@ -23,14 +23,14 @@ const Home: React.FC = (props: Props) => {
                     <div className={"h-[25px] w-[1px] bg-primaryBrown"}></div>
                 </div>
                 <div className={"flex flex-row items-center justify-center gap-x-20 text-center"}>
-                    <p className={"text-4xl font-libreBaskerville text-gray-700"}>March 16,</p>
-                    <div className={"h-[60px] w-[1px] bg-primaryBrown"}></div>
-                    <p className={"text-4xl font-libreBaskerville text-gray-700"}>San Diego</p>
+                    <p className={"text-4xl font-libreCaslonDisplay text-gray-800"}>MARCH 16,</p>
+                    <div className={"h-[50px] w-[1px] mr-[1px] bg-primaryBrown"}></div>
+                    <p className={"text-4xl font-libreCaslonDisplay text-gray-800"}>SAN DIEGO</p>
                 </div>
-                <div className={"flex flex-row items-center justify-center gap-x-28 text-center"}>
-                    <p className={"text-4xl font-libreBaskerville text-gray-700"}>2025</p>
-                    <div className={"h-[60px] w-[1px] bg-primaryBrown mr-[42px]"}></div>
-                    <p className={"text-4xl font-libreBaskerville text-gray-700"}>CA</p>
+                <div className={"flex flex-row items-center justify-center gap-x-32 text-center"}>
+                    <p className={"text-4xl font-libreCaslonDisplay text-gray-800"}>2025</p>
+                    <div className={"h-[50px] w-[1px] bg-primaryBrown mr-[29px]"}></div>
+                    <p className={"text-4xl font-libreCaslonDisplay text-gray-800"}>CA</p>
                 </div>
                 <div className={"flex flex-col items-center justify-center mb-5 mr-2"}>
                     <div className={"h-[25px] w-[1px] bg-primaryBrown"}></div>
@@ -43,7 +43,15 @@ const Home: React.FC = (props: Props) => {
             </div>
 
             <div className={"flex flex-col items-center"}>
-                <button className={"bg-primaryBrown w-[100px] h-[50px] text-white rounded-lg text-lg"}>RSVP</button>
+                <button
+                    className={"bg-primaryBrown w-[100px] h-[50px] text-white rounded-lg text-lg sm:mt-0 my-4"}>RSVP
+                </button>
+                <div className={"bg-primaryBrown/40 w-[600px] h-[1px] my-4"}></div>
+                <p className={"text-[24px] font-thin font-montserrat mt-6"}>CEREMONY & RECEPTION</p>
+                <p className={"text-[16px] font-thin font-montserrat mt-2"}>Grand Tradition Estate & Gardens</p>
+                <p className={"text-[16px] font-thin font-montserrat"}>220 Grand Tradition Way, Fallbrook, CA, 92028-4107</p>
+                <p className={"text-[16px] font-thin font-montserrat mt-2 mb-6"}>Attire: Semi-Formal</p>
+                <div className={"bg-primaryBrown/40 w-[600px] h-[1px] my-4"}></div>
             </div>
         </div>
     );

@@ -6,6 +6,8 @@ export default {
       fontFamily: {
         dancingScript: ["Dancing Script", "cursive"],
         libreBaskerville: ["Libre Baskerville", "serif"],
+        libreCaslonDisplay: ["Libre Caslon Display", "serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       colors: {
         primaryBG: '#FAFCF7',
@@ -13,6 +15,7 @@ export default {
         primaryBlue: '#19ABDC',
         primarySkyBlue: '#52CFFF',
         primaryGreen: '#17B169',
+        primaryDarkGreen: '#1C380F',
         primaryLightGreen: '#DAF7A6',
         primaryBrown: '#8A642F',
       },

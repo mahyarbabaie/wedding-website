@@ -2,7 +2,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faX,faBars} from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
 import React, {useMemo, useState} from "react";
-import homePageHeaderImage from "../../assets/GTHomeSample.jpeg";
 import weddingLogo from "../../assets/weddinglogo.png";
 import {
     HOME_PAGE,
@@ -96,8 +95,7 @@ const MobileBanner: React.FC = (props: Props) => {
                 </Modal>
             </div>
             {props.coverPhoto && <div>
-                <img src={`${homePageHeaderImage}`} alt={"shima and mahyar header image"}
-                     className={"rounded-lg"}/>
+                <img src={`${props.coverPhoto}`} alt={"shima and mahyar header image"} className={"object-cover"}/>
             </div>}
             <div className="flex flex-col items-center text-center justify-center">
                 <div className="mx-auto my-8">

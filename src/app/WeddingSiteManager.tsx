@@ -24,7 +24,7 @@ interface CoverPhoto {
 }
 
 const coverPhotoMap = new Map<String, CoverPhoto>([
-    [HOME_PAGE, {name: `${homePageCoverImg}`, height: 500, width: 1200}],
+    [HOME_PAGE, {name: `${homePageCoverImg}`, height: 550, width: 1200}],
     [REGISTRY_PAGE, { name: `${registryPageCoverImg}`, height: 400, width: 1000}]
 ])
 

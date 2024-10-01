@@ -1,6 +1,6 @@
 import NotFound from "./app/pages/NotFound.tsx";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import WeddingSiteManager from "./app/pages/WeddingSiteManager.tsx";
+import WeddingSiteManager from "./app/WeddingSiteManager.tsx";
 import Modal from "react-modal";
 
 Modal.setAppElement('#root');

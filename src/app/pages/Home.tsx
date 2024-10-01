@@ -1,24 +1,10 @@
 import React from "react";
-import homePageCoverImg from "../../assets/GTHomeSample.jpeg"
-import MobileBanner from "../components/MobileBanner.tsx"
-import DesktopBanner from "../components/DesktopBanner.tsx";
-import {HOME_PAGE} from "../constants";
 
-
-interface Props {
-    setCurrentPage: any
-}
-
-const Home: React.FC = (props: Props) => {
+const Home: React.FC = () => {
     return (
-        <div className="flex flex-col h-screen bg-primaryBG">
+        <div className="flex flex-col">
             {/* desktop view */}
             <div className="sm:block hidden">
-                <div className="flex flex-col items-center text-center justify-center">
-                    <DesktopBanner pageName={HOME_PAGE} setCurrentPage={props.setCurrentPage}/>
-                    <img src={`${homePageCoverImg}`} alt={"shima and mahyar header image"}
-                         className={"object-cover h-[500px] w-[1200px] px-10 my-4 rounded-md"}/>
-                </div>
                 <div className={"flex flex-col items-center justify-center mt-2 mr-2"}>
                     <div className={"h-[25px] w-[1px] bg-primaryBrown"}></div>
                 </div>
@@ -37,21 +23,22 @@ const Home: React.FC = (props: Props) => {
                 </div>
             </div>
 
-            {/* mobile view */}
-            <div className="sm:hidden block">
-                <MobileBanner pageName={"S & M"} setCurrentPage={props.setCurrentPage} coverPhoto={homePageCoverImg}/>
-            </div>
-
             <div className={"flex flex-col items-center"}>
                 <button
                     className={"bg-primaryBrown w-[100px] h-[50px] text-white rounded-lg text-lg sm:mt-0 my-4"}>RSVP
                 </button>
-                <div className={"bg-primaryBrown/40 w-[600px] h-[1px] my-4"}></div>
+                <div className={"bg-primaryBrown/40 sm:w-2/5 w-full h-[1px] my-4"}></div>
                 <p className={"sm:text-[24px] text-[20px] font-thin font-montserrat mt-6"}>CEREMONY & RECEPTION</p>
-                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat mt-2"}>Grand Tradition Estate & Gardens</p>
+                <p className={"sm:text-[20px] text-[16px] font-thin font-montserrat my-2"}>3:00 PM - 10:00 PM</p>
+                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat"}>Grand Tradition Estate & Gardens</p>
                 <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat"}>220 Grand Tradition Way, Fallbrook, CA, 92028</p>
-                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat mt-2 mb-6"}>Attire: Semi-Formal</p>
-                <div className={"bg-primaryBrown/40 w-[600px] h-[1px] my-4"}></div>
+                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat my-2"}>Attire: Semi-Formal</p>
+                <p className={"text-[14px] font-thin font-montserrat text-center sm:w-1/3 w-full sm:px-0 px-3 mt-4 mb-6"}>
+                    The name of our venue at the location is Arbor Terrace. We recommend coming to the venue by 2:30 PM.
+                    You will be greeted by champagne or cider as you enter.
+                    There is plenty of parking at the venue as well if you plan on driving.
+                </p>
+                <div className={"bg-primaryBrown/40 sm:w-2/5 w-full h-[1px] my-4"}></div>
             </div>
         </div>
     );

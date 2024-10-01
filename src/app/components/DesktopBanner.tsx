@@ -21,6 +21,7 @@ interface NavTabs {
 interface Props {
     pageName: string
     setCurrentPage: any
+    coverPhoto?: string
 }
 
 const DesktopBanner: React.FC = (props: Props) => {
@@ -60,15 +61,19 @@ const DesktopBanner: React.FC = (props: Props) => {
     }
 
     return (
-        <div className="flex flex-col items-center text-center justify-center">
+        <div className="sm:flex hidden flex-col items-center text-center justify-center">
             <div className="mx-auto mt-10 mb-6">
                 <img src={`${weddingLogo}`} alt={"shima and mahyar logo"}/>
             </div>
             <p className="text-4xl font-dancingScript text-gray-800 my-4">{headerTitle}</p>
             <p className="font-libreBaskerville text-gray-600 mt-2 mb-10">{headerDate}</p>
             <div className="flex flex-row gap-x-10 my-2">
-                {navTabs.map((navTab, $index) => <button key={navTab.name + $index} className={"font-libreBaskerville text-md hover:underline hover:underline-offset-4 " + (props.pageName == navTab.name ? "font-bold underline underline-offset-4" : "text-gray-800") } onClick={navTab.onClick}>{navTab.name}</button>)}
+                {navTabs.map((navTab, $index) => <button key={navTab.name + $index}
+                                                         className={"font-libreBaskerville text-md hover:underline hover:underline-offset-4 " + (props.pageName == navTab.name ? "font-bold underline underline-offset-4" : "text-gray-800")}
+                                                         onClick={navTab.onClick}>{navTab.name}</button>)}
             </div>
+            {props.coverPhoto && <img src={props.coverPhoto} alt={"shima and mahyar cover photo"}
+                  className={"object-cover h-[500px] w-[1200px] px-10 my-4 rounded-md"}/>}
         </div>
     )
 }

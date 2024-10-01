@@ -19,7 +19,7 @@ const headerDate = "March 16, 2025 • San Diego, CA"
 
 interface NavTabs {
     name: string
-    isActive: boolean
+    nickname?: string
     onClick: () => void
 }
 
@@ -34,37 +34,32 @@ const MobileBanner: React.FC = (props: Props) => {
     const [navTabs, setNavTabs] = useState<NavTabs[]>([
         {
             name: HOME_PAGE,
-            isActive: pageName == "S & M",
+            nickname: "S & M",
             onClick: () => handleSetNavTab(HOME_PAGE)
         },
         {
             name: OUR_STORY_PAGE,
-            isActive: pageName == OUR_STORY_PAGE,
+            nickname: OUR_STORY_PAGE,
             onClick: () => handleSetNavTab(OUR_STORY_PAGE)
         },
         {
             name: QA_PAGE,
-            isActive: pageName == QA_PAGE,
             onClick: () => handleSetNavTab(QA_PAGE)
         },
         {
             name: TRAVEL_PAGE,
-            isActive: pageName == TRAVEL_PAGE,
             onClick: () => handleSetNavTab(TRAVEL_PAGE)
         },
         {
             name: THINGS_TO_DO_PAGE,
-            isActive: pageName == THINGS_TO_DO_PAGE,
             onClick: () => handleSetNavTab(THINGS_TO_DO_PAGE)
         },
         {
             name: RSVP_PAGE,
-            isActive: pageName == RSVP_PAGE,
             onClick: () => handleSetNavTab(RSVP_PAGE)
         },
         {
             name: REGISTRY_PAGE,
-            isActive: pageName == REGISTRY_PAGE,
             onClick: () => handleSetNavTab(REGISTRY_PAGE)
         },
     ])
@@ -72,7 +67,7 @@ const MobileBanner: React.FC = (props: Props) => {
 
     const handleSetNavTab = (page: string) => {
         props.setCurrentPage(page)
-        handleSetMobileTabsToggled()
+        setMobileTabsToggled(false)
     }
 
     const handleSetMobileTabsToggled = () => {
@@ -80,13 +75,14 @@ const MobileBanner: React.FC = (props: Props) => {
     }
 
     return (
-        <div>
+        <div className={"sm:hidden block"}>
             <div className="grid grid-cols-12 mx-4 mt-4 mb-2">
                 <button className="my-auto col-span-1" onClick={handleSetMobileTabsToggled}>
                     <FontAwesomeIcon className="h-6 w-auto my-auto mr-3" icon={faBars}/>
                 </button>
                 <p className="text-2xl my-auto col-span-10 text-center font-dancingScript">{props.pageName}</p>
                 <Modal
+                    shouldCloseOnOverlayClick
                     isOpen={mobileTabsToggled}
                     onRequestClose={handleSetMobileTabsToggled}
                     className="relative h-screen z-10 p-4 bg-primaryBG"
@@ -94,7 +90,7 @@ const MobileBanner: React.FC = (props: Props) => {
                     <button onClick={handleSetMobileTabsToggled}><FontAwesomeIcon className="h-5 w-auto m-2" icon={faX}/></button>
                     <div className="flex flex-col gap-y-6 my-4">
                         {navTabs.map((navTab, $index) => <button key={navTab.name + $index}
-                                                                 className={"font-libreBaskerville hover:underline hover:underline-offset-4 " + (navTab.isActive ? "font-bold underline underline-offset-4" : "text-gray-800")}
+                                                                 className={"font-libreBaskerville hover:underline hover:underline-offset-4 " + (navTab.name == pageName || navTab.nickname == pageName ? "font-bold underline underline-offset-4" : "font-medium text-gray-800")}
                                                                  onClick={navTab.onClick}>{navTab.name}</button>)}
                     </div>
                 </Modal>

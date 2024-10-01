@@ -46,14 +46,14 @@ const WeddingSiteManager: React.FC = () => {
             { !isAuthenticated && <PasswordLogin handleSetIsAuthenticated={handleSetIsAuthenticated}/>}
 
             { isAuthenticated &&
-                <div className={"h-screen bg-primaryBG"}>
+                <div className={"flex flex-col bg-primaryBG"}>
                     <DesktopBanner pageName={currentPage} setCurrentPage={handleSetCurrentPage} coverPhoto={coverPhotoMap.get(currentPage)}/>
                     <MobileBanner pageName={mobilePageMap.get(currentPage)} setCurrentPage={handleSetCurrentPage} coverPhoto={coverPhotoMap.get(currentPage)}/>
 
                     {currentPage == HOME_PAGE && <Home setCurrentPage={handleSetCurrentPage}/>}
 
                     <Footer/>
-            </div>
+                </div>
             }
         </>
 

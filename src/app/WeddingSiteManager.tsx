@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Home from "./pages/Home.tsx";
 import PasswordLogin from "./pages/PasswordLogin.tsx";
 import {
@@ -16,6 +16,7 @@ import registryPageCoverImg from "../assets/registrycoverphoto.png"
 import MobileBanner from "./components/MobileBanner.tsx";
 import Footer from "./components/Footer.tsx";
 import Registry from "./pages/Registry.tsx";
+import RSVP from "./pages/RSVP.tsx";
 
 interface CoverPhoto {
     name: string
@@ -24,8 +25,8 @@ interface CoverPhoto {
 }
 
 const coverPhotoMap = new Map<String, CoverPhoto>([
-    [HOME_PAGE, {name: `${homePageCoverImg}`, height: 550, width: 1200}],
-    [REGISTRY_PAGE, { name: `${registryPageCoverImg}`, height: 400, width: 1000}]
+    [HOME_PAGE, {name: `${homePageCoverImg}`, height: 400, width: 1000}],
+    [REGISTRY_PAGE, { name: `${registryPageCoverImg}`, height: 400, width: 800}]
 ])
 
 const mobilePageMap = new Map<String, String>([
@@ -60,7 +61,8 @@ const WeddingSiteManager: React.FC = () => {
                     <MobileBanner pageName={mobilePageMap.get(currentPage)} setCurrentPage={handleSetCurrentPage} coverPhoto={coverPhotoMap.get(currentPage)?.name} />
 
                     {currentPage == HOME_PAGE && <Home setCurrentPage={handleSetCurrentPage}/>}
-                    {currentPage == REGISTRY_PAGE && <Registry setCurrentPage={handleSetCurrentPage}/>}
+                    {currentPage == REGISTRY_PAGE && <Registry />}
+                    {currentPage == RSVP_PAGE && <RSVP /> }
 
                     <Footer/>
                 </div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useMemo, useState} from "react";
 import weddingLogo from "../../assets/weddinglogo.png";
 import {
     HOME_PAGE,
@@ -27,6 +27,7 @@ interface Props {
 }
 
 const DesktopBanner: React.FC = (props: Props) => {
+    const coverImgDimensions = useMemo(() => `h-[${props.coverHeight}px] w-[${props.coverWidth}px]`, [props.coverHeight, props.coverWidth])
     const [navTabs, setNavTabs] = useState<NavTabs[]>([
         {
             name: HOME_PAGE,
@@ -75,7 +76,7 @@ const DesktopBanner: React.FC = (props: Props) => {
                                                          onClick={navTab.onClick}>{navTab.name}</button>)}
             </div>
             {props.coverPhoto && <img src={props.coverPhoto} alt={"shima and mahyar cover photo"}
-                  className={`object-cover h-[${props.coverHeight ?? 500}px] w-[${props.coverWidth ?? 1200}px] px-10 my-4 rounded-md`}/>}
+                  className={"object-cover px-10 my-4 rounded-md " + coverImgDimensions}/>}
         </div>
     )
 }

@@ -1,6 +1,11 @@
 import React from "react";
+import {RSVP_PAGE} from "../constants";
 
-const Home: React.FC = () => {
+interface Props {
+    setCurrentPage: any
+}
+
+const Home: React.FC = (props: Props) => {
     return (
         <div className="flex flex-col">
             {/* desktop view */}
@@ -25,6 +30,7 @@ const Home: React.FC = () => {
 
             <div className={"flex flex-col items-center"}>
                 <button
+                    onClick={() => props.setCurrentPage(RSVP_PAGE)}
                     className={"bg-primaryBrown w-[100px] h-[50px] text-white rounded-lg text-lg sm:mt-0 my-4"}>RSVP
                 </button>
                 <div className={"bg-primaryBrown/40 sm:w-2/5 w-full h-[1px] my-4"}></div>

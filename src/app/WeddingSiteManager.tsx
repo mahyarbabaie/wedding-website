@@ -12,11 +12,20 @@ import {
 } from "./constants";
 import DesktopBanner from "./components/DesktopBanner.tsx";
 import homePageCoverImg from "../assets/GTHomeSample.jpeg";
+import registryPageCoverImg from "../assets/registrycoverphoto.png"
 import MobileBanner from "./components/MobileBanner.tsx";
 import Footer from "./components/Footer.tsx";
+import Registry from "./pages/Registry.tsx";
 
-const coverPhotoMap = new Map<String, String>([
-    [HOME_PAGE, `${homePageCoverImg}`],
+interface CoverPhoto {
+    name: string
+    height: number
+    width: number
+}
+
+const coverPhotoMap = new Map<String, CoverPhoto>([
+    [HOME_PAGE, {name: `${homePageCoverImg}`, height: 500, width: 1200}],
+    [REGISTRY_PAGE, { name: `${registryPageCoverImg}`, height: 400, width: 1000}]
 ])
 
 const mobilePageMap = new Map<String, String>([
@@ -47,10 +56,11 @@ const WeddingSiteManager: React.FC = () => {
 
             { isAuthenticated &&
                 <div className={"flex flex-col bg-primaryBG"}>
-                    <DesktopBanner pageName={currentPage} setCurrentPage={handleSetCurrentPage} coverPhoto={coverPhotoMap.get(currentPage)}/>
-                    <MobileBanner pageName={mobilePageMap.get(currentPage)} setCurrentPage={handleSetCurrentPage} coverPhoto={coverPhotoMap.get(currentPage)}/>
+                    <DesktopBanner pageName={currentPage} setCurrentPage={handleSetCurrentPage} coverPhoto={coverPhotoMap.get(currentPage)?.name} coverHeight={coverPhotoMap.get(currentPage)?.height} coverWidth={coverPhotoMap.get(currentPage)?.width} />
+                    <MobileBanner pageName={mobilePageMap.get(currentPage)} setCurrentPage={handleSetCurrentPage} coverPhoto={coverPhotoMap.get(currentPage)?.name} />
 
                     {currentPage == HOME_PAGE && <Home setCurrentPage={handleSetCurrentPage}/>}
+                    {currentPage == REGISTRY_PAGE && <Registry setCurrentPage={handleSetCurrentPage}/>}
 
                     <Footer/>
                 </div>

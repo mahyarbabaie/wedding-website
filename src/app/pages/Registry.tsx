@@ -1,12 +1,16 @@
 import React from "react";
 import mahyarVenmoImg from "../../assets/mahyarvenmo.jpg"
 import shimaVenmoImg from "../../assets/shimavenmo.jpg"
-
+import registryPageCoverImg from "../../assets/registrycoverphoto.png"
 
 const Registry: React.FC = () => {
     return (
         <div className="flex flex-col mb-10">
             <div className={"flex flex-col items-center"}>
+                <div className={"sm:block hidden"}>
+                    <img src={`${registryPageCoverImg}`} alt={"shima and mahyar cover photo"}
+                         className={"object-cover px-10 my-4 rounded-md h-[400px] w-[800px]"}/>
+                </div>
                 <p className={"sm:text-[24px] text-[20px] font-thin font-montserrat mt-6"}>Registry Info</p>
                 <p className={"sm:w-1/2 sm:px-0 px-4 sm:text-[18px] text-[15px] font-thin font-montserrat my-4"}>
                     If you're considering a gift, cash will help us build our future together.

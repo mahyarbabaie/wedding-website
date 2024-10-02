@@ -21,13 +21,9 @@ interface NavTabs {
 interface Props {
     pageName: string
     setCurrentPage: any
-    coverPhoto?: string
-    coverWidth?: number
-    coverHeight?: number
 }
 
 const DesktopBanner: React.FC = (props: Props) => {
-    const coverImgDimensions = useMemo(() => `h-[${props.coverHeight}px] w-[${props.coverWidth}px]`, [props.coverHeight, props.coverWidth])
     const [navTabs, setNavTabs] = useState<NavTabs[]>([
         {
             name: HOME_PAGE,
@@ -75,8 +71,6 @@ const DesktopBanner: React.FC = (props: Props) => {
                                                          className={"font-montserrat text-md hover:underline hover:underline-offset-4 " + (props.pageName == navTab.name ? "font-bold underline underline-offset-4" : "text-gray-800")}
                                                          onClick={navTab.onClick}>{navTab.name}</button>)}
             </div>
-            {props.coverPhoto && <img src={props.coverPhoto} alt={"shima and mahyar cover photo"}
-                  className={"object-cover px-10 my-4 rounded-md " + coverImgDimensions}/>}
         </div>
     )
 }

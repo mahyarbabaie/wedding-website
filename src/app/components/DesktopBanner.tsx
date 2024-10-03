@@ -1,12 +1,10 @@
-import React, {useMemo, useState} from "react";
+import React, {useState} from "react";
 import weddingLogo from "../../assets/weddinglogo.png";
 import {
     HOME_PAGE,
-    OUR_STORY_PAGE,
     QA_PAGE,
     REGISTRY_PAGE,
     RSVP_PAGE,
-    THINGS_TO_DO_PAGE,
     TRAVEL_PAGE
 } from "../constants";
 
@@ -30,20 +28,8 @@ const DesktopBanner: React.FC = (props: Props) => {
             onClick: () => handleSetNavTab(HOME_PAGE)
         },
         {
-            name: OUR_STORY_PAGE,
-            onClick: () => handleSetNavTab(OUR_STORY_PAGE)
-        },
-        {
-            name: QA_PAGE,
-            onClick: () => handleSetNavTab(QA_PAGE)
-        },
-        {
             name: TRAVEL_PAGE,
             onClick: () => handleSetNavTab(TRAVEL_PAGE)
-        },
-        {
-            name: THINGS_TO_DO_PAGE,
-            onClick: () => handleSetNavTab(THINGS_TO_DO_PAGE)
         },
         {
             name: RSVP_PAGE,
@@ -52,6 +38,10 @@ const DesktopBanner: React.FC = (props: Props) => {
         {
             name: REGISTRY_PAGE,
             onClick: () => handleSetNavTab(REGISTRY_PAGE)
+        },
+        {
+            name: QA_PAGE,
+            onClick: () => handleSetNavTab(QA_PAGE)
         },
     ])
 

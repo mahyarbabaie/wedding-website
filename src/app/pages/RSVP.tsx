@@ -1,7 +1,6 @@
 import React, {ChangeEvent, useMemo, useState} from "react";
 import {useForm} from "react-hook-form";
 import {ErrorMessage} from "@hookform/error-message";
-import Modal from "react-modal";
 import {REGISTRY_PAGE} from "../constants";
 
 interface RsvpForm {
@@ -48,8 +47,8 @@ const RSVP: React.FC = (props: Props) => {
 
     return (
         <div className="flex flex-col items-center my-7 w-full gap-y-7">
-            <p className={"font-montserrat text-2xl mt-4"}>Wedding RSVP</p>
-            <form onSubmit={handleSubmit(onSubmit)} className={(rsvpIsSuccessful ? "hidden" : "")}>
+            <p className={"font-dancingScript sm:text-[36px] text-[30px] mt-4"}>Wedding RSVP</p>
+            <form onSubmit={handleSubmit(onSubmit)} className={(rsvpIsSuccessful ? "hidden" : "bg-white rounded-lg shadow shadow-amber-50")}>
                 {/* Email */}
                 <div className={"my-6 flex flex-col px-10"}>
                     <label htmlFor={"email"}>
@@ -149,7 +148,7 @@ const RSVP: React.FC = (props: Props) => {
 
                 <div className={"flex flex-col px-11"}>
                     <button type="submit"
-                            className="font-montserrat bg-primaryBrown text-white font-bold py-2 px-auto mt-2 rounded-md sm:w-1/5 w-1/3 mb-6"
+                            className="font-montserrat bg-primaryBrown text-white font-bold py-2 px-auto mt-2 rounded-md sm:w-1/5 w-1/3 sm:mb-1 mb-3"
                             disabled={rsvpIsSuccessful}
                     >
                         Submit

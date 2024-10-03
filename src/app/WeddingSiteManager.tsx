@@ -4,10 +4,8 @@ import PasswordLogin from "./pages/PasswordLogin.tsx";
 import {
     HOME_PAGE,
     IS_AUTHENTICATED,
-    OUR_STORY_PAGE,
     QA_PAGE, REGISTRY_PAGE,
     RSVP_PAGE,
-    THINGS_TO_DO_PAGE,
     TRAVEL_PAGE
 } from "./constants";
 import DesktopBanner from "./components/DesktopBanner.tsx";
@@ -17,20 +15,21 @@ import Registry from "./pages/Registry.tsx";
 import RSVP from "./pages/RSVP.tsx";
 import homePageCoverImg from "../assets/GTHomeSample.jpeg";
 import registryPageCoverImg from "../assets/registrycoverphoto.png";
+import qaCoverImg from "../assets/qacoverphoto.png";
+import QA from "./pages/QA.tsx";
 
 const mobilePageMap = new Map<String, String>([
     [HOME_PAGE, "S & M"],
-    [OUR_STORY_PAGE, OUR_STORY_PAGE],
     [QA_PAGE, QA_PAGE],
     [TRAVEL_PAGE, TRAVEL_PAGE],
-    [THINGS_TO_DO_PAGE, THINGS_TO_DO_PAGE],
     [RSVP_PAGE, RSVP_PAGE],
     [REGISTRY_PAGE, REGISTRY_PAGE],
 ])
 
 const mobileCoverPhotoImgMap = new Map<String,String>([
     [HOME_PAGE, `${homePageCoverImg}`],
-    [REGISTRY_PAGE, `${registryPageCoverImg}`]
+    [QA_PAGE, `${qaCoverImg}`],
+    [REGISTRY_PAGE, `${registryPageCoverImg}`],
 ])
 
 const WeddingSiteManager: React.FC = () => {
@@ -57,6 +56,7 @@ const WeddingSiteManager: React.FC = () => {
                     {currentPage == HOME_PAGE && <Home setCurrentPage={handleSetCurrentPage}/>}
                     {currentPage == REGISTRY_PAGE && <Registry />}
                     {currentPage == RSVP_PAGE && <RSVP setCurrentPage={handleSetCurrentPage}/> }
+                    {currentPage == QA_PAGE && <QA />}
 
                     <Footer/>
                 </div>

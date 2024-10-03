@@ -16,7 +16,9 @@ import RSVP from "./pages/RSVP.tsx";
 import homePageCoverImg from "../assets/GTHomeSample.jpeg";
 import registryPageCoverImg from "../assets/registrycoverphoto.png";
 import qaCoverImg from "../assets/qacoverphoto.png";
+import travelCoverImg from "../assets/travelcoverphoto.jpeg"
 import QA from "./pages/QA.tsx";
+import Travel from "./pages/Travel.tsx";
 
 const mobilePageMap = new Map<String, String>([
     [HOME_PAGE, "S & M"],
@@ -28,8 +30,9 @@ const mobilePageMap = new Map<String, String>([
 
 const mobileCoverPhotoImgMap = new Map<String,String>([
     [HOME_PAGE, `${homePageCoverImg}`],
-    [QA_PAGE, `${qaCoverImg}`],
+    [TRAVEL_PAGE, `${travelCoverImg}`],
     [REGISTRY_PAGE, `${registryPageCoverImg}`],
+    [QA_PAGE, `${qaCoverImg}`],
 ])
 
 const WeddingSiteManager: React.FC = () => {
@@ -54,8 +57,9 @@ const WeddingSiteManager: React.FC = () => {
                     <MobileBanner pageName={mobilePageMap.get(currentPage)} setCurrentPage={handleSetCurrentPage} coverPhoto={mobileCoverPhotoImgMap.get(currentPage)}/>
 
                     {currentPage == HOME_PAGE && <Home setCurrentPage={handleSetCurrentPage}/>}
-                    {currentPage == REGISTRY_PAGE && <Registry />}
+                    {currentPage == TRAVEL_PAGE && <Travel />}
                     {currentPage == RSVP_PAGE && <RSVP setCurrentPage={handleSetCurrentPage}/> }
+                    {currentPage == REGISTRY_PAGE && <Registry />}
                     {currentPage == QA_PAGE && <QA />}
 
                     <Footer/>

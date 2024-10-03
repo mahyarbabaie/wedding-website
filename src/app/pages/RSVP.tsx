@@ -48,7 +48,7 @@ const RSVP: React.FC = (props: Props) => {
     return (
         <div className="flex flex-col items-center my-7 w-full gap-y-7">
             <p className={"font-dancingScript sm:text-[36px] text-[30px] mt-4"}>Wedding RSVP</p>
-            <form onSubmit={handleSubmit(onSubmit)} className={(rsvpIsSuccessful ? "hidden" : "bg-white rounded-lg shadow shadow-amber-50")}>
+            <form onSubmit={handleSubmit(onSubmit)} className={(rsvpIsSuccessful ? "hidden" : "bg-white rounded-lg shadow")}>
                 {/* Email */}
                 <div className={"my-6 flex flex-col px-10"}>
                     <label htmlFor={"email"}>
@@ -146,7 +146,7 @@ const RSVP: React.FC = (props: Props) => {
                     />
                 </div>
 
-                <div className={"flex flex-col px-11"}>
+                <div className={"flex flex-col px-11 pb-4"}>
                     <button type="submit"
                             className="font-montserrat bg-primaryBrown text-white font-bold py-2 px-auto mt-2 rounded-md sm:w-1/5 w-1/3 sm:mb-1 mb-3"
                             disabled={rsvpIsSuccessful}
@@ -157,7 +157,7 @@ const RSVP: React.FC = (props: Props) => {
             </form>
             {rsvpIsSuccessful &&
                     <div
-                        className={"flex flex-col items-center bg-white border border-primaryDarkGreen rounded-xl px-5 sm:w-1/4 w-5/6 sm:mb-12"}>
+                        className={"flex flex-col items-center bg-white shadow rounded-xl px-5 sm:w-1/4 w-5/6 sm:mb-12"}>
                         <p className={"font-montserrat text-lg text-center my-14"}>You have successfully RSVP'd to
                             our wedding!</p>
                         <button onClick={navigateToRegistry}

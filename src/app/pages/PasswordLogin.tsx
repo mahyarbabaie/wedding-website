@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {faLock} from "@fortawesome/free-solid-svg-icons/faLock";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

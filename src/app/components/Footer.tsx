@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
             <p className={"font-dancingScript sm:text-[48px] text-[36px]"}>S & M</p>
             <div className={"bg-black w-[140px] h-[1px] my-3"}></div>
             <p className={"font-light font-dancingScript text-[20px]"}>3.16.2025</p>
-            <p className={"font-montserrat text-[14px] mt-6 mb-1"}>Created by Mahyar Babaie</p>
+            <p className={"font-montserrat text-[14px] mt-6 mb-3"}>Created by Mahyar Babaie</p>
         </div>
     )
 }

@@ -17,6 +17,7 @@ export default {
         primaryGreen: '#17B169',
         primaryDarkGreen: '#1C380F',
         primaryLightGreen: '#DAF7A6',
+        primaryDarkBrown: '#5C4033',
         primaryBrown: '#8A642F',
       },
       animation: {

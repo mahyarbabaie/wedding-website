@@ -1,7 +1,8 @@
 import React, {ChangeEvent, useMemo, useState} from "react";
 import {useForm} from "react-hook-form";
 import {ErrorMessage} from "@hookform/error-message";
-
+import Modal from "react-modal";
+import {REGISTRY_PAGE} from "../constants";
 
 interface RsvpForm {
     email: string
@@ -10,9 +11,13 @@ interface RsvpForm {
     additionalGuestNames: string
 }
 
+interface Props {
+    setCurrentPage: any
+}
+
 const baseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf9DF5-U6Lifyt2VEjgwTZyQgyOb9Ey40XFfHpk2GzGbVgkjA/formResponse?"
 
-const RSVP: React.FC = () => {
+const RSVP: React.FC = (props: Props) => {
     const { register, handleSubmit, formState:{errors}} = useForm<RsvpForm>()
     const [isAttending, setIsAttending] = useState("")
     const [rsvpIsSuccessful, setRsvpIsSuccessful] = useState(false)
@@ -22,19 +27,27 @@ const RSVP: React.FC = () => {
         setIsAttending(data.target.value)
     }
 
-    const onSubmit = async (e: RsvpForm) => {
-        await fetch(baseUrl +
-            new URLSearchParams({
-                "entry.790488985": e.email,
-                "entry.1310912153": e.guestName,
-                "entry.575591887": e.attending,
-                "entry.263363259": e.additionalGuestNames ?? ""
-            }), {mode: "no-cors"});
-
-        setRsvpIsSuccessful(!rsvpIsSuccessful)
+    const navigateToRegistry = () => {
+        props.setCurrentPage(REGISTRY_PAGE)
     }
+
+    const onSubmit = async (e: RsvpForm) => {
+        try {
+            await fetch(baseUrl +
+                new URLSearchParams({
+                    "entry.790488985": e.email,
+                    "entry.1310912153": e.guestName,
+                    "entry.575591887": e.attending,
+                    "entry.263363259": e.additionalGuestNames ?? ""
+                }), {mode: "no-cors"});
+        } catch (e) {
+        } finally {
+            setRsvpIsSuccessful(!rsvpIsSuccessful)
+        }
+    }
+
     return (
-        <div className="flex flex-col items-center my-9 w-full gap-y-7">
+        <div className="flex flex-col items-center my-7 w-full gap-y-7">
             <p className={"font-montserrat text-2xl mt-4"}>Wedding RSVP</p>
             <form onSubmit={handleSubmit(onSubmit)} className={(rsvpIsSuccessful ? "hidden" : "")}>
                 {/* Email */}
@@ -136,16 +149,25 @@ const RSVP: React.FC = () => {
 
                 <div className={"flex flex-col px-11"}>
                     <button type="submit"
-                            className="font-montserrat bg-primaryBrown hover:bg-primarySkyBlue text-white font-bold py-2 px-auto mt-2 rounded-md sm:w-1/5 w-1/3"
+                            className="font-montserrat bg-primaryBrown text-white font-bold py-2 px-auto mt-2 rounded-md sm:w-1/5 w-1/3 mb-6"
                             disabled={rsvpIsSuccessful}
                     >
                         Submit
                     </button>
                 </div>
             </form>
-            <p>
-
-            </p>
+            {rsvpIsSuccessful &&
+                    <div
+                        className={"flex flex-col items-center bg-white border border-primaryDarkGreen rounded-xl px-5 sm:w-1/4 w-5/6 sm:mb-12"}>
+                        <p className={"font-montserrat text-lg text-center my-14"}>You have successfully RSVP'd to
+                            our wedding!</p>
+                        <button onClick={navigateToRegistry}
+                                className={"bg-primaryBrown text-white font-montserrat py-3 rounded-lg mb-8 sm:w-1/2 w-5/6"}>
+                            Continue to Registry
+                        </button>
+                    </div>
+            }
+            {rsvpIsSuccessful && <div className={"sm:my-36"}></div>}
         </div>
     );
 };

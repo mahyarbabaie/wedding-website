@@ -56,7 +56,7 @@ const WeddingSiteManager: React.FC = () => {
 
                     {currentPage == HOME_PAGE && <Home setCurrentPage={handleSetCurrentPage}/>}
                     {currentPage == REGISTRY_PAGE && <Registry />}
-                    {currentPage == RSVP_PAGE && <RSVP /> }
+                    {currentPage == RSVP_PAGE && <RSVP setCurrentPage={handleSetCurrentPage}/> }
 
                     <Footer/>
                 </div>

@@ -81,7 +81,6 @@ const MobileBanner: React.FC = (props: Props) => {
                 </button>
                 <p className="text-2xl my-auto col-span-10 text-center font-dancingScript">{props.pageName}</p>
                 <Modal
-                    shouldCloseOnOverlayClick
                     isOpen={mobileTabsToggled}
                     onRequestClose={handleSetMobileTabsToggled}
                     className="relative h-screen z-10 p-4 bg-primaryBG"

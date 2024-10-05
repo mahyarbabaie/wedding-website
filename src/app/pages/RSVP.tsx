@@ -47,7 +47,7 @@ const RSVP: React.FC = (props: Props) => {
 
     return (
         <div className="flex flex-col items-center my-7 w-full gap-y-7">
-            <p className={"font-dancingScript sm:text-[36px] text-[30px] mt-4"}>Wedding RSVP</p>
+            <p className={"font-dancingScript sm:text-[36px] text-[30px] mt-2"}>Wedding RSVP</p>
             <form onSubmit={handleSubmit(onSubmit)} className={(rsvpIsSuccessful ? "hidden" : "bg-white rounded-lg shadow")}>
                 {/* Email */}
                 <div className={"my-6 flex flex-col px-10"}>

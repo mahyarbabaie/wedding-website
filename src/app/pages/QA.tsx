@@ -1,15 +1,9 @@
 import React from "react";
-import qaCoverImg from "../../assets/qacoverphoto.png"
 
 const QA: React.FC = () => {
     return (
-        <div className="flex flex-col mb-10">
-            <div className={"flex flex-col items-center"}>
-                <div className={"sm:block hidden"}>
-                    <img src={`${qaCoverImg}`} alt={"shima and mahyar cover photo"}
-                         className={"object-cover my-4 rounded-md h-auto w-auto"}/>
-                </div>
-
+        <div className="flex flex-col mb-10 mx-auto">
+            <div className={"flex flex-col items-center max-w-screen-lg"}>
                 <p className={"sm:w-5/6 sm:px-0 px-4 sm:text-[16px] text-[15px] font-bold font-montserrat mt-10"}>
                     What should I wear?
                 </p>

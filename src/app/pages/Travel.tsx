@@ -45,24 +45,27 @@ const Travel: React.FC = () => {
                 </div>
                 <p className={"sm:text-[36px] text-[30px] font-thin font-dancingScript mt-3 mb-5"}>Hotels</p>
                 <div className={"grid sm:grid-cols-2 sm:w-2/3 gap-x-10 gap-y-5 sm:mx-0 mx-2"}>
-                    <div className={"flex flex-col rounded-md bg-white shadow"}>
+                    <div className={"flex flex-col rounded-md bg-white shadow h-auto"}>
                         <img src={`${palamesaImg}`} alt={"pala mesa photo"}
                              className={"object-cover rounded-md h-[360px]"}/>
                         <p className={"text-md font-montserrat mt-4 mb-2 text-primaryDarkGreen px-4"}>14 Minutes</p>
-                        <p className={"text-xl font-montserrat my-2 px-4"}>Pala Mesa Resort</p>
+                        <p className={"text-xl font-montserrat my-1 px-4"}>Pala Mesa Resort</p>
+                        <p className={"text-md font-montserrat text-primaryDarkGreen px-4"}>2001 Old Hwy 395, Fallbrook, CA 92028</p>
                         <p className={"text-[17px] font-thin font-montserrat my-4 text-gray-700 px-4"}>
                             This is the main hotel where the wedding party will be staying.
-                            We recommend booking this hotel, as it is the closest to the wedding venue.</p>
-                        <p className={"text-xl font-montserrat my-2 px-4 pb-4"}>$202 - $252<span className="text-[18px] text-gray-700 font-light font-montserrat">/night</span></p>
+                            We recommend booking this hotel, as it is the closest to the wedding venue.
+                            This hotel is also pet friendly.</p>
+                        <p className={"text-xl font-montserrat my-2 px-4 pb-4"}>$202 - $252 <span className="text-[18px] text-gray-700 font-light font-montserrat">/night</span></p>
                     </div>
                     <div className={"flex flex-col rounded-md bg-white shadow"}>
                         <img src={`${hyattImg}`} alt={"hyatt photo"}
                              className={"object-cover rounded-md h-[360px]"}/>
                         <p className={"text-md font-montserrat mt-4 mb-2 text-primaryDarkGreen px-4"}>23 Minutes</p>
-                        <p className={"text-xl font-montserrat my-2 px-4"}>Hyatt Vacation Club at The Welk</p>
+                        <p className={"text-xl font-montserrat my-1 px-4"}>Hyatt Vacation Club at The Welk</p>
+                        <p className={"text-md font-montserrat text-primaryDarkGreen px-4"}>8860 Lawrence Welk Dr, Escondido, CA 92026</p>
                         <p className={"text-[17px] font-thin font-montserrat my-4 text-gray-700 px-4"}>
-                            This hotel is a great choice if you are looking for a more luxurious stay.
-                             They also have 1 - 3 bedroom suites to pick from as well if you are traveling with a big party.
+                            This hotel is a great choice if you are looking 1 - 3 bedroom suites to pick from.
+                            It will be further away from the venue compared to Pala Mesa Resort.
                         </p>
                         <p className={"text-xl font-montserrat my-2 px-4 pb-4"}>$189 - $550 <span
                             className="text-[18px] text-gray-700 font-light font-montserrat">/night</span></p>

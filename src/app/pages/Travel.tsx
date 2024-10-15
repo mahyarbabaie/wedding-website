@@ -67,7 +67,7 @@ const Travel: React.FC = () => {
                             This hotel is a great choice if you are looking 1 - 3 bedroom suites to pick from.
                             It will be further away from the venue compared to Pala Mesa Resort.
                         </p>
-                        <p className={"text-xl font-montserrat my-2 px-4 pb-4"}>$189 - $550 <span
+                        <p className={"text-xl font-montserrat mb-2 mt-auto px-4 pb-4"}>$189 - $550 <span
                             className="text-[18px] text-gray-700 font-light font-montserrat">/night</span></p>
                     </div>
                 </div>

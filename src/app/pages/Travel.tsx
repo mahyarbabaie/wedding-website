@@ -18,7 +18,7 @@ const HOTELS: Hotel[] = [
         image: `${missionPacificImg}`,
         time: "30 Minutes",
         name: "MISSION PACIFIC BEACH RESORT",
-        address: "201 N MYERS STREET, Oceanside, CA, 92054",
+        address: "201 N Myers Street, Oceanside, CA, 92054",
         description: "This is the hotel where the wedding party will be staying. " +
             "It offers luxurious oceanfront rooms and suites, providing breathtaking views of the coastline. " +
             "Guests can enjoy fine dining at Valle, a Michelin-starred restaurant led by renowned Chef Roberto Alcocer. " +

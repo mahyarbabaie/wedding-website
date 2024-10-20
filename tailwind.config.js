@@ -16,6 +16,7 @@ export default {
         primarySkyBlue: '#52CFFF',
         primaryGreen: '#17B169',
         primaryDarkGreen: '#1C380F',
+        primaryGrassyGreen: '#2a6e40',
         primaryLightGreen: '#DAF7A6',
         primaryDarkBrown: '#5C4033',
         primaryBrown: '#8A642F',

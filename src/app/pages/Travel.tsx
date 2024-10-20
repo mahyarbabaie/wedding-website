@@ -90,7 +90,7 @@ const Travel: React.FC = () => {
                     </div>
                 </div>
                 <p className={"sm:text-[36px] text-[30px] font-thin font-dancingScript mt-3 mb-5"}>Hotels</p>
-                <div className={"grid sm:grid-cols-3 w-full sm:gap-x-5 sm:gap-y-5 sm:mx-0 mx-2 sm:px-4"}>
+                <div className={"grid sm:grid-cols-3 w-full sm:gap-x-5 sm:gap-y-5 sm:mx-0 mx-2 sm:px-4 px-1"}>
                     {
                         HOTELS.map((hotel, index: number) =>
                             <div className={"flex flex-col rounded-md bg-white shadow"}>
@@ -99,7 +99,7 @@ const Travel: React.FC = () => {
                                         <img src={hotel.image} alt={`hotel ${index} photo`}
                                              className={"object-cover rounded-md h-[360px]"}/>
                                         <div className="absolute top-0 left-0 h-16 w-16">
-                                            <p className="absolute transform -rotate-45 z-30 -left-[40px] top-[40px] w-[200px] px-2 py-1 my-auto text-md text-center font-bold bg-primaryGrassyGreen text-white">
+                                            <p className="absolute transform -rotate-45 z-30 sm:-left-[40px] sm:top-[40px] -left-[50px] top-[35px] w-[200px] px-2 py-1 my-auto text-md text-center font-bold bg-primaryGrassyGreen text-white">
                                                 Wedding Party
                                             </p>
                                         </div>

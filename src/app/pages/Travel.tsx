@@ -1,5 +1,4 @@
 import React from "react";
-import travelPageCoverImg from "../../assets/travelcoverphoto.jpeg"
 import palamesaImg from "../../assets/palamesaphoto.png"
 import missionPacificImg from "../../assets/mission-pacific-img.png"
 import seabirdImg from "../../assets/seabird-img.png"
@@ -53,11 +52,7 @@ const Travel: React.FC = () => {
     return (
         <div className="flex flex-col mb-10">
             <div className={"flex flex-col items-center"}>
-                <div className={"sm:block hidden"}>
-                    <img src={`${travelPageCoverImg}`} alt={"shima and mahyar cover photo"}
-                         className={"object-cover my-4 rounded-md h-[400px] w-[800px]"}/>
-                </div>
-                <p className={"sm:text-[36px] text-[30px] font-thin font-dancingScript mt-3 "}>Flights</p>
+                <p className={"sm:text-[36px] text-[30px] font-thin font-dancingScript mt-8"}>Flights</p>
                 <div className={"grid sm:grid-cols-2 sm:my-10 my-3"}>
                     <div className={"flex flex-col items-center sm:mx-64 sm:px-0 px-4 text-center"}>
                         <p className={"text-[30px] font-light text-primaryDarkGreen font-montserrat sm:mt-6 mt-3"}>

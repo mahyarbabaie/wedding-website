@@ -17,7 +17,7 @@ const PasswordLogin: React.FC = (props: Props) => {
     const [password, setPassword] = useState("")
     const [passwordFailed, setPasswordFailed] = useState(false)
     const lockIcon = faLock
-    const expectedPassword = import.meta.env.VITE_PASSWORD
+    const expectedPassword = "shadi"
 
     const onSubmit: SubmitHandler<PasswordLoginForm> = async (passwordLoginForm: PasswordLoginForm) => {
         if (passwordLoginForm.password == expectedPassword) {

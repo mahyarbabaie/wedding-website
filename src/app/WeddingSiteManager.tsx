@@ -13,9 +13,8 @@ import MobileBanner from "./components/MobileBanner.tsx";
 import Footer from "./components/Footer.tsx";
 import Registry from "./pages/Registry.tsx";
 import RSVP from "./pages/RSVP.tsx";
-import homePageCoverImg from "../assets/GTHomeSample.jpeg";
-import registryPageCoverImg from "../assets/registrycoverphoto.png";
-import travelCoverImg from "../assets/travelcoverphoto.jpeg"
+import homePageCoverImg from "../assets/bridge-facing-lake.png";
+import registryPageCoverImg from "../assets/frontLakeTogether.png";
 import QA from "./pages/QA.tsx";
 import Travel from "./pages/Travel.tsx";
 
@@ -29,7 +28,6 @@ const mobilePageMap = new Map<String, String>([
 
 const mobileCoverPhotoImgMap = new Map<String,String>([
     [HOME_PAGE, `${homePageCoverImg}`],
-    [TRAVEL_PAGE, `${travelCoverImg}`],
     [REGISTRY_PAGE, `${registryPageCoverImg}`],
 ])
 

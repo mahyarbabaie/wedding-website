@@ -1,6 +1,6 @@
 import React from "react";
 import {RSVP_PAGE} from "../constants";
-import homePageCoverImg from "../../assets/GTHomeSample.jpeg";
+import homePageCoverImg from "../../assets/bridge-facing-lake.png";
 
 interface Props {
     setCurrentPage: any
@@ -13,7 +13,7 @@ const Home: React.FC = (props: Props) => {
             <div className="sm:block hidden">
                 <div className={"flex flex-col items-center justify-center mt-2 mr-2"}>
                     <img src={`${homePageCoverImg}`} alt={"shima and mahyar cover photo"}
-                                              className={"object-cover px-10 my-4 rounded-md h-[400px] w-[1000px]"}/>
+                                              className={"object-cover object-center my-4 rounded-md h-[500px] w-[1000px]"}/>
                     <div className={"h-[25px] w-[1px] bg-primaryBrown"}></div>
                 </div>
                 <div className={"flex flex-row items-center justify-center gap-x-20 text-center"}>

@@ -82,11 +82,8 @@ const MobileBanner: React.FC = (props: Props) => {
                     </div>
                 </Modal>
             </div>
-            {props.coverPhoto && <div className={"relative z-0 h-[250px] w-full"}>
-                <div className={"absolute -z-10 overflow-hidden"}>
-                    <img src={`${props.coverPhoto}`} alt={"shima and mahyar header image"}
-                         className={"scale-150 overflow-hidden"}/>
-                </div>
+            {props.coverPhoto && <div>
+                <img src={`${props.coverPhoto}`} alt={"shima and mahyar header image"} className={"object-cover"}/>
             </div>}
             <div className="flex flex-col items-center text-center justify-center">
                 <div className="mx-auto my-8">

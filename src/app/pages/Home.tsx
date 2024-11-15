@@ -40,7 +40,7 @@ const Home: React.FC = (props: Props) => {
                 <p className={"sm:text-[24px] text-[20px] font-thin font-montserrat mt-6"}>CEREMONY & RECEPTION</p>
                 <p className={"sm:text-[20px] text-[16px] font-thin font-montserrat my-2"}>3:00 PM - 10:00 PM</p>
                 <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat"}>Grand Tradition Estate & Gardens</p>
-                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat"}>220 Grand Tradition Way, Fallbrook, CA, 92028</p>
+                <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat"}>220 Grand Tradition Way, Fallbrook, CA 92028</p>
                 <p className={"sm:text-[16px] text-[14px] font-thin font-montserrat my-2"}>Attire: Semi-Formal</p>
                 <p className={"text-[14px] font-thin font-montserrat text-center sm:w-1/3 w-full sm:px-0 px-3 mt-4 mb-6"}>
                     The name of our venue at the location is Arbor Terrace. We recommend coming to the venue by 2:30 PM.

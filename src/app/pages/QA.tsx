@@ -14,6 +14,14 @@ const QA: React.FC = () => {
                     t-shirts.
                 </p>
 
+                <p className={"sm:w-5/6 sm:px-0 px-4 sm:text-[16px] text-[15px] font-bold font-montserrat mt-10"}>
+                    Can I bring children to the wedding?
+                </p>
+                <p className={"sm:w-5/6 sm:px-0 px-4 sm:text-[16px] text-[15px] font-thin font-montserrat my-2"}>
+                    While we cherish your little ones, our wedding is designed as an adult celebration.
+                    However, we would be delighted to welcome children aged 12 and older.
+                </p>
+
                 <p className={"sm:w-5/6 sm:px-0 px-4 sm:text-[16px] text-[15px] font-bold font-montserrat mt-8"}>
                     What dress colors should I avoid wearing?
                 </p>
@@ -57,7 +65,8 @@ const QA: React.FC = () => {
                     Will there be dancing?
                 </p>
                 <p className={"sm:w-5/6 sm:px-0 px-4 sm:text-[16px] text-[15px] font-thin font-montserrat my-2"}>
-                    As it's a Persian wedding, dancing is a must! We will also have a Persian DJ who will energize the atmosphere with his music and lighting.
+                    As it's a Persian wedding, dancing is a must! We will also have a Persian DJ who will energize the
+                    atmosphere with his music and lighting.
                 </p>
 
                 <p className={"sm:w-5/6 sm:px-0 px-4 sm:text-[16px] text-[15px] font-bold font-montserrat mt-8"}>

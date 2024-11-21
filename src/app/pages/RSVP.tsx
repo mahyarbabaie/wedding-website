@@ -135,7 +135,11 @@ const RSVP: React.FC = (props: Props) => {
                     <label htmlFor={"additionalGuestNames"}>
                         <span className={"px-1 font-montserrat"}>Additional Guest Names</span>
                     </label>
-                    <p className={"px-1 font-light font-montserrat text-sm my-1"}>If you are adding more than one guest,
+                    <p className={"px-1 font-light italic font-montserrat text-sm my-1"}>
+                        Please note, while we cherish your little ones, our wedding is designed as an adult celebration. However, we would be delighted to welcome children aged 12 and older.
+                    </p>
+                    <p className={"px-1 font-light font-montserrat text-sm my-1"}>
+                        If you are adding more than one guest,
                         put a comma in between their names. ex: (Andrew Smith, Nicole Smith)</p>
                     <input
                         type={"text"}

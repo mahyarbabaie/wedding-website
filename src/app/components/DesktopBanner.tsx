@@ -4,7 +4,7 @@ import {
     HOME_PAGE,
     QA_PAGE,
     REGISTRY_PAGE,
-    RSVP_PAGE,
+    RSVP_PAGE, SCHEDULE_PAGE,
     TRAVEL_PAGE
 } from "../constants";
 
@@ -26,6 +26,10 @@ const DesktopBanner: React.FC = (props: Props) => {
         {
             name: HOME_PAGE,
             onClick: () => handleSetNavTab(HOME_PAGE)
+        },
+        {
+            name: SCHEDULE_PAGE,
+            onClick: () => handleSetNavTab(SCHEDULE_PAGE)
         },
         {
             name: TRAVEL_PAGE,

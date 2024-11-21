@@ -1,13 +1,7 @@
 import React, {useState} from "react";
 import Home from "./pages/Home.tsx";
 import PasswordLogin from "./pages/PasswordLogin.tsx";
-import {
-    HOME_PAGE,
-    IS_AUTHENTICATED,
-    QA_PAGE, REGISTRY_PAGE,
-    RSVP_PAGE,
-    TRAVEL_PAGE
-} from "./constants";
+import {HOME_PAGE, IS_AUTHENTICATED, QA_PAGE, REGISTRY_PAGE, RSVP_PAGE, SCHEDULE_PAGE, TRAVEL_PAGE} from "./constants";
 import DesktopBanner from "./components/DesktopBanner.tsx";
 import MobileBanner from "./components/MobileBanner.tsx";
 import Footer from "./components/Footer.tsx";
@@ -17,6 +11,7 @@ import homePageCoverImg from "../assets/bridge-facing-lake.png";
 import registryPageCoverImg from "../assets/frontLakeTogether.png";
 import QA from "./pages/QA.tsx";
 import Travel from "./pages/Travel.tsx";
+import Schedule from "./pages/Schedule.tsx";
 
 const mobilePageMap = new Map<String, String>([
     [HOME_PAGE, "S & M"],
@@ -24,6 +19,7 @@ const mobilePageMap = new Map<String, String>([
     [TRAVEL_PAGE, TRAVEL_PAGE],
     [RSVP_PAGE, RSVP_PAGE],
     [REGISTRY_PAGE, REGISTRY_PAGE],
+    [SCHEDULE_PAGE, SCHEDULE_PAGE]
 ])
 
 const mobileCoverPhotoImgMap = new Map<String,String>([
@@ -53,6 +49,7 @@ const WeddingSiteManager: React.FC = () => {
                     <MobileBanner pageName={mobilePageMap.get(currentPage)} setCurrentPage={handleSetCurrentPage} coverPhoto={mobileCoverPhotoImgMap.get(currentPage)}/>
 
                     {currentPage == HOME_PAGE && <Home setCurrentPage={handleSetCurrentPage}/>}
+                    {currentPage == SCHEDULE_PAGE && <Schedule/> }
                     {currentPage == TRAVEL_PAGE && <Travel />}
                     {currentPage == RSVP_PAGE && <RSVP setCurrentPage={handleSetCurrentPage}/> }
                     {currentPage == REGISTRY_PAGE && <Registry />}

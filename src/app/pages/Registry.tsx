@@ -23,7 +23,7 @@ const Registry: React.FC = () => {
                 </p>
                 <ul className={"sm:w-1/2 sm:px-0 px-4 sm:text-[18px] text-[15px] font-thin font-montserrat list-disc w-full"}>
                     <li className={"my-1 ml-5"}>Cash or Check at the wedding</li>
-                    <li className={"my-1 ml-5"}>Zelle: Shima Daneshnia - 949-300-0676</li>
+                    <li className={"my-1 ml-5"}>Zelle: Shima Daneshnia - shimadn95@gmail.com</li>
                     <li className={"my-1 ml-5"}>Venmo: @Mahyar-Babaie</li>
                 </ul>
                 <div className={"grid sm:grid-cols-2 sm:gap-x-10"}>

@@ -48,7 +48,15 @@ const RSVP: React.FC = (props: Props) => {
     return (
         <div className="flex flex-col items-center my-7 w-full gap-y-7">
             <p className={"font-dancingScript sm:text-[36px] text-[30px] mt-2"}>Wedding RSVP</p>
-            <form onSubmit={handleSubmit(onSubmit)} className={(rsvpIsSuccessful ? "hidden" : "bg-white rounded-lg shadow")}>
+            <div className={rsvpIsSuccessful ? "hidden" : "sm:hidden block" }>
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSf9DF5-U6Lifyt2VEjgwTZyQgyOb9Ey40XFfHpk2GzGbVgkjA/viewform?embedded=true"
+                    width="390" height="1100" frameBorder="0" marginHeight="0" marginWidth="0"
+                >
+                </iframe>
+            </div>
+            <form onSubmit={handleSubmit(onSubmit)}
+                  className={(rsvpIsSuccessful ? "hidden" : "bg-white rounded-lg shadow sm:block hidden")}>
                 {/* Email */}
                 <div className={"my-6 flex flex-col px-10"}>
                     <label htmlFor={"email"}>
@@ -136,7 +144,8 @@ const RSVP: React.FC = (props: Props) => {
                         <span className={"px-1 font-montserrat"}>Additional Guest Names</span>
                     </label>
                     <p className={"px-1 font-light italic font-montserrat text-sm my-1"}>
-                        Please note, while we cherish your little ones, our wedding is designed as an adult celebration. However, we would be delighted to welcome children aged 12 and older.
+                        Please note, while we cherish your little ones, our wedding is designed as an adult celebration.
+                        However, we would be delighted to welcome children aged 12 and older.
                     </p>
                     <p className={"px-1 font-light font-montserrat text-sm my-1"}>
                         If you are adding more than one guest,
@@ -160,15 +169,15 @@ const RSVP: React.FC = (props: Props) => {
                 </div>
             </form>
             {rsvpIsSuccessful &&
-                    <div
-                        className={"flex flex-col items-center bg-white shadow rounded-xl px-5 sm:w-1/4 w-5/6 sm:mb-12"}>
-                        <p className={"font-montserrat text-lg text-center my-14"}>You have successfully RSVP'd to
-                            our wedding!</p>
-                        <button onClick={navigateToRegistry}
-                                className={"bg-primaryBrown text-white font-montserrat py-3 rounded-lg mb-8 sm:w-1/2 w-5/6"}>
-                            Continue to Registry
-                        </button>
-                    </div>
+                <div
+                    className={"flex flex-col items-center bg-white shadow rounded-xl px-5 sm:w-1/4 w-5/6 sm:mb-12"}>
+                    <p className={"font-montserrat text-lg text-center my-14"}>You have successfully RSVP'd to
+                        our wedding!</p>
+                    <button onClick={navigateToRegistry}
+                            className={"bg-primaryBrown text-white font-montserrat py-3 rounded-lg mb-8 sm:w-1/2 w-5/6"}>
+                        Continue to Registry
+                    </button>
+                </div>
             }
             {rsvpIsSuccessful && <div className={"sm:my-36"}></div>}
         </div>

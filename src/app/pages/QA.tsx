@@ -26,8 +26,8 @@ const QA: React.FC = () => {
                     What dress colors should I avoid wearing?
                 </p>
                 <p className={"sm:w-5/6 sm:px-0 px-4 sm:text-[16px] text-[15px] font-thin font-montserrat my-2"}>
-                    When selecting dress colors, please refrain from wearing red or white or any shade of white, such as ivory, as
-                    these are reserved for the bride.
+                    When selecting dress colors, please refrain from wearing white or any shade of white, such as ivory, as
+                    these are reserved for the bride. We also don't want the color red at our wedding since it doesn't go with the theme.
                 </p>
 
                 <p className={"sm:w-5/6 sm:px-0 px-4 sm:text-[16px] text-[15px] font-bold font-montserrat mt-8"}>
